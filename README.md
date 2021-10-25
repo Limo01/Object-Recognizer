@@ -42,3 +42,6 @@ This script requires installed the following Python libraries:
 * tensorflow
 * scikit-learn
 * numpy
+
+## Screenshot ##
+![Mickey_Mouse](img/mickey_mouse.PNG)
