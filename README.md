@@ -33,6 +33,8 @@ The command has two type of invocation:
   -m MODEL, --model MODEL
                         Model file name to use for the recognition.
                         E.g: python objRecognition -m objectGroup1
+  -l, --list            List all the object that the model can recognize.
+                        You must use this option with the --model option
 ```
 **Note**: _It makes sense to use the -n option only with the -t option_
 
