@@ -36,7 +36,7 @@ The command has two type of invocation:
 ```
 **Note**: _It makes sense to use the -n option only with the -t option_
 
-## Libraries ##
+## Requirements ##
 This script requires installed the following Python libraries:
 * opencv
 * tensorflow
