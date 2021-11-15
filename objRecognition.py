@@ -14,7 +14,7 @@ parser.add_argument('-t', '--train', help='Train a new model. You must write the
 parser.add_argument('-n', '--nimages', help='Images number for each object to train the model. \nDefault: 100', default=100)
 
 parser.add_argument('-m', '--model', help='Model file name to use for the recognition.\nE.g: python objRecognition -m objectGroup1', type=str, default=None)
-parser.add_argument('-l', '--list', help='Lists all the object that the model can recognize. \nYou must use this option with the --model option', action='store_true')
+parser.add_argument('-l', '--list', help='Lists all the objects that the model can recognize. \nYou must use this option with the --model option', action='store_true')
 
 args = parser.parse_args()
 
