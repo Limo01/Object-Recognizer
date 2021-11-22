@@ -1,5 +1,5 @@
 # Object-Recognizer
-Python command that allow to train a model and use it to recognize objects.
+Python command that allows to train a model and use it to recognize objects
 
 ## How to run ##
 The command has two type of invocation:
