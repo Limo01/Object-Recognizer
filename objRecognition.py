@@ -18,13 +18,13 @@ parser.add_argument('-l', '--list', help='Lists all the objects that the model c
 
 args = parser.parse_args()
 
-if(args.train == None and args.model == None):
+if args.train == None and args.model == None:
     print("You must use one of -t or -m options to run the script")
     exit(0)
-elif(args.train != None and args.model != None):
+elif args.train != None and args.model != None:
     print("You must use only one of -t or -m options to run the script")
     exit(0)
-elif(args.train != None):
+elif args.train != None:
     trainModel.collect_data(args.nimages, args.train)
 else:
     useModel.use_model(args.model,args.list)

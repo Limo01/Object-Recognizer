@@ -62,7 +62,7 @@ def __train(classes, data):
     one_hot_labels = to_categorical(Int_labels, 4)
 
     # Now we're splitting the data, 75% for training and 25% for testing.
-    (trainX, testX, trainY, testY) = train_test_split(images, one_hot_labels, test_size=0.25, random_state=50)
+    trainX, testX, trainY, testY = train_test_split(images, one_hot_labels, test_size=0.25, random_state=50)
 
     # Empty memory from RAM
     images = []
@@ -121,7 +121,7 @@ def __train(classes, data):
 
     name= input('Write a file name for the model (Will be created a folder with the same name): ')
 
-    while(os.path.isdir(name)):
+    while os.path.isdir(name):
         name= input('Folder '+name+' already exists. Please choice another name for the model: ')
 
     os.mkdir(name)
@@ -165,7 +165,7 @@ def collect_data(n, classes):
     # Index of the class for which collect the images
     c = 0
 
-    while c<len(classes):
+    while c < len(classes):
         # Read frame by frame
         ret, frame = camera.read()
 
@@ -195,7 +195,7 @@ def collect_data(n, classes):
             # Text for the counter
             text = "Collected Samples of {}: {}".format(classes[c], counter)         
 
-            if(counter==n):
+            if counter==n:
                 c += 1
                 counter = 0
                 recording = False
@@ -209,9 +209,9 @@ def collect_data(n, classes):
 
         k = cv2.waitKey(1)
         
-        if(k==ord('r')):
+        if k==ord('r'):
             recording= True
-        elif(k==ord('q')):
+        elif k==ord('q'):
             exit(0)
 
     camera.release()

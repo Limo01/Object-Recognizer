@@ -12,7 +12,7 @@ import pickle
 #
 # model_name => model name to use
 # -----------------------------------------------------------------------------------------
-def use_model(model_name,print_classes):
+def use_model(model_name, print_classes):
     if(not os.path.isdir(model_name)):
         print('The model doesn\'t exists')
         return
@@ -24,7 +24,7 @@ def use_model(model_name,print_classes):
     with open(model_name+'/classes.ob', 'rb') as fp:
         classes = pickle.load(fp)
     
-    if(print_classes):
+    if print_classes:
         print('The application can recognize the following objects:')
         for c in classes:
             print(f"* {c}")
